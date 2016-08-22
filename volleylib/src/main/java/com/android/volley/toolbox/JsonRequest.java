@@ -26,6 +26,7 @@ import com.android.volley.VolleyLog;
 import java.io.UnsupportedEncodingException;
 
 /**
+ * 抽象类，继承自 Request，代表了 body 为 JSON 的请求。提供了构建 JSON 请求参数的方法。
  * A request for retrieving a T type response body at a given URL that also
  * optionally sends along a JSON body in the request specified.
  *

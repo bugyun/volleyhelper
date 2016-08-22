@@ -21,6 +21,9 @@ import android.os.Handler;
 import java.util.concurrent.Executor;
 
 /**
+ * 请求结果传输接口具体实现类。
+ * 在 Handler 对应线程中传输缓存调度线程或者网络调度线程中产生的请求结果或请求错误，
+ * 会在请求成功的情况下调用 Request.deliverResponse(…) 函数，失败时调用 Request.deliverError(…) 函数。
  * Delivers responses and errors.
  */
 public class ExecutorDelivery implements ResponseDelivery {

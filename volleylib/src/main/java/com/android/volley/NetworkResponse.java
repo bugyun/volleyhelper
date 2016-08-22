@@ -22,19 +22,22 @@ import java.util.Collections;
 import java.util.Map;
 
 /**
+ * Network中方法 performRequest 的返回值，Request的 parseNetworkResponse(…) 方法入参，是 Volley 中用于内部 Response 转换的一级。
+ * 封装了网络请求响应的 StatusCode，Headers 和 Body 等。
  * Data and headers returned from {@link Network#performRequest(Request)}.
  */
 public class NetworkResponse {
     /**
      * Creates a new network response.
-     * @param statusCode the HTTP status code
-     * @param data Response body
-     * @param headers Headers returned with this response, or null for none
-     * @param notModified True if the server returned a 304 and the data was already in cache
+     *
+     * @param statusCode    the HTTP status code
+     * @param data          Response body
+     * @param headers       Headers returned with this response, or null for none
+     * @param notModified   True if the server returned a 304 and the data was already in cache
      * @param networkTimeMs Round-trip network time to receive network response
      */
     public NetworkResponse(int statusCode, byte[] data, Map<String, String> headers,
-            boolean notModified, long networkTimeMs) {
+                           boolean notModified, long networkTimeMs) {
         this.statusCode = statusCode;
         this.data = data;
         this.headers = headers;
@@ -43,7 +46,7 @@ public class NetworkResponse {
     }
 
     public NetworkResponse(int statusCode, byte[] data, Map<String, String> headers,
-            boolean notModified) {
+                           boolean notModified) {
         this(statusCode, data, headers, notModified, 0);
     }
 
@@ -55,19 +58,34 @@ public class NetworkResponse {
         this(HttpStatus.SC_OK, data, headers, false, 0);
     }
 
-    /** The HTTP status code. */
+    /**
+     * Http 响应状态码
+     * The HTTP status code.
+     */
     public final int statusCode;
 
-    /** Raw data from this response. */
+    /**
+     * Body 数据
+     * Raw data from this response.
+     */
     public final byte[] data;
 
-    /** Response headers. */
+    /**
+     * 响应 Headers
+     * Response headers.
+     */
     public final Map<String, String> headers;
 
-    /** True if the server returned a 304 (Not Modified). */
+    /**
+     * 表示是否为 304 响应
+     * True if the server returned a 304 (Not Modified).
+     */
     public final boolean notModified;
 
-    /** Network roundtrip time in milliseconds. */
+    /**
+     * 请求耗时
+     * Network roundtrip time in milliseconds.
+     */
     public final long networkTimeMs;
 }
 

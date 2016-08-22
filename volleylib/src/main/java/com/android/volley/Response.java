@@ -17,6 +17,7 @@
 package com.android.volley;
 
 /**
+ * 封装了经过解析后的数据，用于传输。并且有两个内部接口 Listener 和 ErrorListener 分别可表示请求失败和成功后的回调。
  * Encapsulates a parsed response for delivery.
  *
  * @param <T> Parsed type of this response

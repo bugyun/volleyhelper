@@ -16,19 +16,25 @@
 
 package com.android.volley;
 
+/**
+ * 请求结果的传输接口，用于传递请求结果或者请求错误。
+ */
 public interface ResponseDelivery {
     /**
+     * 此方法用于传递请求结果，request 和 response 参数分别表示请求信息和返回结果信息。
      * Parses a response from the network or cache and delivers it.
      */
     public void postResponse(Request<?> request, Response<?> response);
 
     /**
+     * 此方法用于传递请求结果，并在完成传递后执行 Runnable。
      * Parses a response from the network or cache and delivers it. The provided
      * Runnable will be executed after delivery.
      */
     public void postResponse(Request<?> request, Response<?> response, Runnable runnable);
 
     /**
+     * 此方法用于传输请求错误。
      * Posts an error for the given request.
      */
     public void postError(Request<?> request, VolleyError error);
