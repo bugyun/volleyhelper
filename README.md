@@ -1,17 +1,17 @@
-#Volleyhelper
+# Volleyhelper
 volley帮助类
 
-##什么是volley
+## 什么是volley
 * 之前，我们在程序中需要网络通信的时候，大体使用的东西莫过于AsyncTaskLoader、HttpURLConnection、AsyncTask、HTTPClient（Apache）等。
 * Google I/O 2013上，Volley发布了，Volley是Android平台上的网络通信库，能使网络通信更快，更简单，更健壮。
 * Volley名称的由来： a burst or emission of many things or a large amount at once
 
-##什么是Volleyhelper
+## 什么是Volleyhelper
 
 基于2015年10月31日最新volley代码，它是一个通过配置各种参数，来很方便的实现网络方面的业务逻辑，简化开发者代码。Volley特别适合数据量不大但是通信频繁的场景，所以代码中没有增加上传和下载的模块。
 
 
-##使用方法
+## 使用方法
 
 ##### 1.初始化
 使用默认值
@@ -107,24 +107,24 @@ public class MainActivity extends Activity implements VolleyHelper.IHelperAction
 }
 ```
 
-##有问题反馈
+## 有问题反馈
 在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流
 
 * QQ: 76428796(暂时只用QQ)
 
 
-##感激
+## 感激
 感谢以下的项目,排名不分先后
 
 * [volley](https://android.googlesource.com/platform/frameworks/volley) (有墙)
 
-##相关资料
+## 相关资料
 
 * [volley官方介绍视频](http://www.youtube.com/watch?v=yhv8l9F44qo&feature=player_embedded)(有墙)
 * [volley源码](https://android.googlesource.com/platform/frameworks/volley) (有墙)
 
 
-##关于作者
+## 关于作者
 
 ```
 String name = "张耀煌",
